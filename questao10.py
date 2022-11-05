@@ -3,7 +3,7 @@ retorna o seu conceito, conforme a tabela abaixo:"""
 
 def nota(i):
     if i < 0:
-        print('Não é possível atribuir uma nota negativa.')
+        return Exception
     elif 0 <= i <=4.9:
         return 'D'
     elif 5<=i<=6.9:
@@ -13,8 +13,11 @@ def nota(i):
     elif 9 <=i<= 10:
         return "A"
     else:
-        return "Uma nota não pode ser maior que 10"
+        return Exception
 
-assert nota(6) == "D"
+assert nota(6) == "C"
 assert nota(9) == "A"
-print('Todos os testes OK')    
+assert nota(7.6) == "B"
+assert nota(-5) == Exception
+assert nota(12) == Exception
+print('Todos os testes OK \U0001F44D')    

@@ -2,8 +2,9 @@
 a categoria desse nadador de acordo com a tabela abaixo:"""
 
 def idade(i):
+
     if i < 5:
-        print('Crianças menores de 5 anos não podem nadar.')
+        return Exception
     elif 5 <= i <=7:
         return 'Infantil A'
     elif 8<=i<=10:
@@ -17,4 +18,7 @@ def idade(i):
 
 assert idade(6) == "Infantil A"
 assert idade(55) == "Adulto"
-print('Todos os testes OK')    
+assert idade(2) == Exception
+assert idade(13) == "Juvenil A"
+
+print('Todos os testes OK \U0001F44D')    

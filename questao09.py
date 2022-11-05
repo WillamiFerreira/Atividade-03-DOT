@@ -1,13 +1,18 @@
 """Faça uma função que recebe um valor inteiro e verifica se o valor é par ou
 ímpar. A função deve retornar um valor booleano."""
 
-def valor(n):
-    if n % 2 == 0:
+
+def imparPar(valor):
+    if valor <= 0 or isinstance(valor, float):
+        return Exception
+    if valor % 2 == 0:
         return True
     else:
         return False
 
+assert imparPar(5) == False
+assert imparPar(4) == True
+assert imparPar(5.44) == Exception
 
-assert valor(5) == False
-assert valor(6) == True
-print('Tudo certo')
+
+print('Todos os testes estão OK \U0001F44D')

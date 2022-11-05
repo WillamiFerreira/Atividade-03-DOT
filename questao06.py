@@ -4,16 +4,19 @@ perfeito quando ele é igual à soma dos seus divisores excetuando ele próprio.
 um valor booleano."""
 def valor(numero):
     soma = 0
-    for n in range(1, numero, -1):
-        if type(numero/n) == int:
+    if numero <= 0:
+        return Exception
+    for n in range(1, numero):
+        if numero % n == 0: 
             soma += n
-        else:
-            pass
-    print(soma)
     if soma == numero:
         return True
     else:
         return False 
 
 assert valor(6) == True
-print('Tudo certo')
+assert valor(28) == True
+assert valor(423) == False
+assert valor(-3) == Exception
+
+print('Todos os testes estão OK \U0001F44D')

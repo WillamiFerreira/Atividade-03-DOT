@@ -2,11 +2,16 @@
 ou negativo. A função deve retornar um valor booleano."""
 
 def valor(n):
-    if n < 0:
+    if isinstance(n, float):
+        return Exception
+    if n <= 0:
         return False
     else:
-        True
+        return True
 
 assert valor(-6) == False
 assert valor(10) == True
-print('Todos os testes estão OK')
+assert valor(33.45) == Exception
+assert valor(-421) == False
+assert valor(0) == False
+print('Todos os testes estão OK \U0001F44D')
