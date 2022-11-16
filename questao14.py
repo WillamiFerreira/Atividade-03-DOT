@@ -15,3 +15,21 @@ o Triângulo Escaleno: os comprimentos dos 3 lados são diferentes.'''
 com os valores é possível fazer um triângulo ou não. Se for possível, a função deve
 classificar o triângulo.
 '''
+
+def triangulo(a, b, c):
+    if (a + b < c) or (a + c < b) or (b + c < a):
+        return Exception
+    else:
+        if (a == b) and (a == c):
+            return 'Equilátero'
+        elif (a==b) or (a==c) or (b==c):
+            return 'Isósceles'
+        else:
+            return 'Escaleno'
+
+
+assert triangulo(4, 4, 4) == 'Equilátero'
+assert triangulo(10, 56, 9) == Exception
+assert triangulo(2, 4, 5) == 'Escaleno'
+
+print('Todos os testes estão OK')
