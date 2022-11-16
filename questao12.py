@@ -2,16 +2,10 @@
 ordenados em ordem crescente.'''
 
 def ordena_numeros(n1, n2):
-    ordenados = list()
+    ordenados = [n1, n2]
     if type(n1) == int and type(n2) == int:
-        if n1 < n2:
-            ordenados.append(n1)
-            ordenados.append(n2)
-            return ordenados
-        else:
-            ordenados.append(n2)
-            ordenados.append(n1)
-            return ordenados
+        ordenados.sort()
+        return ordenados
     else:
         return Exception
 
