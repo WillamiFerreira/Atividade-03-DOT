@@ -34,5 +34,5 @@ def funcao(dados):
 
 
 dados = {1 : [5000, 2], 2 : [1200, 4]}
-assert funcao(dados) == [3100.0, 3, 5000, 0 ]
+assert funcao(dados) == [3100.0, 3, 5000, 0]
 print('Todos os testes estão OK \U0001F44D')
