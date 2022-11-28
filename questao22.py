@@ -9,7 +9,6 @@ def calcula_valor_s(n):
         for v in range(0, n+1):
             fac = factorial(v)
             resultado += 1/fac
-        print(round(resultado, 2))
         return round(resultado, 2)
     else:
         return Exception
