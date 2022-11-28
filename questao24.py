@@ -1,6 +1,6 @@
 '''Escreva uma função que recebe, por parâmetro, dois valores X e Z e calcula
 e retorna Xz. (sem utilizar funções ou operadores de potência prontos)'''
-def verificardor(x, y):
+def verificador(x, y):
     if type(x) == int or type(x) == float:
         if type(y) != int:
             return False
@@ -9,11 +9,10 @@ def verificardor(x, y):
         return False
 
 def potenciacao(x, y):
-    if verificardor(x, y):
+    if verificador(x, y):
         resultado = 1
         for _ in range(y):
             resultado *= x
-        print(resultado)
         return round(resultado, 2)
     else:
         return Exception
