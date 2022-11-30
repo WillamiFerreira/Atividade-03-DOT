@@ -2,12 +2,11 @@
 retorna o somatório desse valor."""
 def somador(n):
     somatorio = 0
-    if type(n) != int or n < 0:
-        return Exception
-
+    if type(n) != int or n < 0: return Exception
     for i in range(1, n+1):
         somatorio += i
     return somatorio
+
 
 assert somador(10) == 55
 assert somador(15) == 120

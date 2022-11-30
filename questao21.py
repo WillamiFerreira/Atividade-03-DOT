@@ -2,8 +2,7 @@
 e retorna o valor de S.
 
 S = 1 + 1⁄2 + 1/3 + 1⁄4 + 1/5 + 1/N.'''
-
-def encontra_valor_s(n):
+def encontra_valor_s(n=None):
     resultado = 0
     if type(n) != int or n < 0:
         return Exception
@@ -15,4 +14,5 @@ assert encontra_valor_s(12) == 3.1
 assert encontra_valor_s(5) == 2.28
 assert encontra_valor_s('string') == Exception
 assert encontra_valor_s(-45) == Exception
+assert encontra_valor_s() == Exception
 print('Todos os testes estão OK')
