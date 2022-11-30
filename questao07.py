@@ -2,7 +2,6 @@
 a categoria desse nadador de acordo com a tabela abaixo:"""
 
 def idade(i):
-
     if i < 5:
         return Exception
     elif 5 <= i <=7:
